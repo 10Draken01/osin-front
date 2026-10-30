@@ -2,6 +2,11 @@
 
 Aplicación web en Angular 20 para operar la tienda: catálogo de productos, captura y edición de pedidos en borrador, listado con filtros, detalle y cambios de estado (confirmar, cancelar y completar). Consume la API REST `osinapi` y cubre sus 14 operaciones.
 
+## IMPORTANTE MIRAR EL VIDEO PARA ENTENDER MEJOR
+```
+https://youtu.be/f1pAgcBTV0k
+```
+
 ## Contenido
 
 1. [Documentación](#documentación)
