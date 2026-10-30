@@ -1,6 +1,6 @@
 import { Routes, UrlMatcher } from '@angular/router';
 
-// Solo ids numéricos; cualquier otra cosa cae en la página de no encontrado.
+/** Solo ids numéricos; cualquier otra cosa cae en la página de no encontrado. */
 const idNumerico =
   (sufijo?: string): UrlMatcher =>
   (segmentos) => {
