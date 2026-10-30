@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+/* IBM Plex Sans servida desde el propio build (sin Google Fonts): solo latín y los pesos usados */
+@import '@fontsource/ibm-plex-sans/latin-400.css';
+@import '@fontsource/ibm-plex-sans/latin-500.css';
+@import '@fontsource/ibm-plex-sans/latin-600.css';
+@import '@fontsource/ibm-plex-sans/latin-700.css';
+
+/*
+ * Tokens de diseño. Tailwind v4 genera utilidades a partir de @theme
+ * (bg-tinta, text-marca, border-linea, ...). Ver docs/04-sistema-de-diseno.md.
+ */
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-tinta: #1c2733;
+  --color-tinta-suave: #4a5866;
+  --color-papel: #f3f5f4;
+  --color-superficie: #ffffff;
+  --color-linea: #d6dcd9;
+  --color-linea-fuerte: #aab4af;
+
+  --color-marca: #0e6b5a;
+  --color-marca-oscura: #0a5245;
+  --color-marca-suave: #e1f0eb;
+
+  --color-borrador: #4f5b69;
+  --color-borrador-suave: #eaeef2;
+  --color-confirmado: #1d5bb8;
+  --color-confirmado-suave: #e4edfb;
+  --color-completado: #0e6b5a;
+  --color-completado-suave: #e1f0eb;
+  --color-cancelado: #ad2a20;
+  --color-cancelado-suave: #fbe9e7;
+  --color-aviso: #8a5300;
+  --color-aviso-suave: #fff2dc;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-papel font-sans text-tinta antialiased;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+  /* Importes y cantidades alineados en columnas */
+  .cifra {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-marca);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
